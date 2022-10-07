@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10"
+>
+
+    <LinearLayout
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/txt_points"
+            android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txt_date"
+                  style="@style/TextViewBlack"
+        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txt_name_or_restaurant"
+                  style="@style/TextViewBlack"
+        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txt_price"
+                  style="@style/TextViewBlack"
+
+        />
+
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/txt_points"
+              style="@style/TextView22BrownRegular"
+              android:layout_centerVertical="true"
+              android:layout_alignParentEnd="true"
+    />
+
+</RelativeLayout>

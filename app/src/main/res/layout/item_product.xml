@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/btn_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/vertical_line"
+            android:padding="@dimen/dimen_5">
+
+        <TextView
+                android:id="@+id/item_name"
+                style="@style/TextViewRedBold18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:lines="2"
+                tools:ignore="RelativeOverlap" />
+
+        <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/contentdescription"
+                android:scaleType="fitXY"
+ />
+
+        <ImageView
+                android:id="@+id/item_image1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/submenu_iten"
+                android:scaleType="fitCenter"
+                android:src="@drawable/small" />
+
+        <TextView
+                android:id="@+id/item_cal"
+                style="@style/TextView18Brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_name"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                tools:ignore="RelativeOverlap" />
+
+
+        <TextView
+                android:id="@+id/item_price"
+                style="@style/TextView18Brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_cal"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dimen_5"
+                tools:ignore="RelativeOverlap" />
+
+
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black50opacity" />
+
+    <View
+            android:id="@+id/vertical_line"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:background="@color/black50opacity"
+            android:visibility="invisible" />
+</RelativeLayout>

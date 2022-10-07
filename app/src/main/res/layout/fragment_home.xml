@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:coverflow="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrolview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFC"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--///////////////////// IMAGE CAROUSEL - start //////////////////////////////-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/default_carousel_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_190"
+                android:contentDescription="@string/welccome_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/carousel" />
+
+            <com.tts.gueststar.utility.ViewPagerCustomDuration
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_190"
+                android:layout_alignParentTop="true"
+                android:visibility="gone" />
+
+            <com.tts.gueststar.utility.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:layout_below="@+id/view_pager"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!--///////////////////// IMAGE CAROUSEL - end //////////////////////////////-->
+
+        <LinearLayout
+            android:id="@+id/all_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_10">
+
+            <!--///////////////////// FAVORITE LOCATION - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_favLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_favLocation"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/title_my_favorite_location" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/txt_favLocation">
+
+                    <TextView
+                        android:id="@+id/txt_change_fav_location"
+                        style="@style/TextView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/dimen_2"
+                        android:layout_toStartOf="@+id/arrow_fav_loc"
+                        android:text="@string/change"
+                        android:textAllCaps="true" />
+
+                    <ImageView
+                        android:id="@+id/arrow_fav_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/contentdescription"
+                        android:importantForAccessibility="no"
+                        android:paddingTop="@dimen/dimen_2"
+                        android:src="@drawable/arrow_small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_favLocation"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@drawable/home_page_components">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_location">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/loc_pin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:contentDescription="@string/contentdescription"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/map_pin" />
+
+                            <TextView
+                                android:id="@+id/txt_no_fav_location"
+                                style="@style/TextViewRedBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/loc_pin"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:gravity="center"
+                                android:text="@string/no_fav_selected"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txt_fav_location_name"
+                                style="@style/TutorialTextView_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/loc_pin"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/brownish_red" />
+
+                            <TextView
+                                android:id="@+id/txt_fav_location_adrress"
+                                style="@style/TextViewSmallBrown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_fav_location_name"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:text="" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_fav_location_adrress"
+                                android:layout_marginStart="@dimen/dimen_10"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:layout_marginEnd="@dimen/dimen_10">
+
+                                <TextView
+                                    android:id="@+id/btn_call"
+                                    style="@style/TitleRedBold"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="0.8"
+                                    android:gravity="start"
+                                    android:text="@string/call_text"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/btn_directions"
+                                        style="@style/HomeLocationTextView"
+                                        android:textColor="@color/brownish_red"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/directions_text" />
+
+                                    <TextView
+                                        android:id="@+id/btn_order"
+                                        android:textColor="@color/brownish_red"
+                                        style="@style/HomeLocationTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dimen_15"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:text="@string/order_text" />
+
+                                    <TextView
+                                        android:id="@+id/btn_delivery"
+                                        style="@style/TitleRedBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/dimen_15"
+                                        android:textAlignment="center"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--///////////////////// FAVORITE LOCATION - end //////////////////////////////-->
+
+            <!--///////////////////// MY POINTS - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_my_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:paddingEnd="@dimen/dimen_5">
+
+                    <RelativeLayout
+                        android:id="@+id/title_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_my_points"
+                            style="@style/Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/title_my_points" />
+
+                        <RelativeLayout
+                            android:id="@+id/payonlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/txt_my_points">
+
+                            <TextView
+                                android:id="@+id/txt_pay_and_earn"
+                                style="@style/TextView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="@dimen/dimen_2"
+                                android:layout_toStartOf="@+id/arrow_pay_earn"
+                                android:text="@string/pay_and_earn" />
+
+                            <ImageView
+                                android:id="@+id/arrow_pay_earn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/contentdescription"
+                                android:paddingTop="@dimen/dimen_2"
+                                android:src="@drawable/arrow_small" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_points"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/home_page_components"
+                        android:padding="@dimen/dimen_2">
+
+                        <LinearLayout
+                            android:id="@+id/balance_value_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_5"
+                            app:ignore="RtlSymmetry">
+
+                            <TextView
+                                android:id="@+id/txt_balance_value"
+                                style="@style/TextViewHi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_my_balance" />
+
+                            <TextView
+                                android:id="@+id/txt_balance_points"
+                                style="@style/TextView22BrownBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:text="@string/zero_poins" />
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_earn_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/balance_value_point"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:background="@drawable/bottom_rounded_button_new">
+
+                            <TextView
+                                style="@style/TextViewSmallYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_5"
+                                android:text="@string/earn_rewards" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_toEndOf="@+id/first"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:paddingEnd="@dimen/dimen_5"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:id="@+id/title_pay_earn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_pay_earn"
+                            style="@style/Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/title_pay_earn"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/txt_pay_earn"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/btn_close_pay_earn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/contentdescription"
+                                android:src="@drawable/close_icon" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_pay_earn"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/home_page_components"
+                        android:padding="@dimen/dimen_2">
+
+                        <TextView
+                            android:id="@+id/txt_scan_code"
+                            style="@style/TextViewSmallBrown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:text="@string/scan_code_desc" />
+
+                        <TextView
+                            android:id="@+id/btn_refresh"
+                            style="@style/TextViewSelectedRewardsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_scan_code"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:text="" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_done_earn_rewards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_refresh"
+                            android:layout_margin="1dp"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:background="@drawable/bottom_rounded_button_new">
+
+                            <TextView
+                                style="@style/TextViewSmallYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_4"
+                                android:text="@string/done"
+                                android:textAllCaps="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--///////////////////// MY POINS - end //////////////////////////////-->
+
+            <!--///////////////////// MY POINTS pay - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_my_points_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:visibility="gone" />
+            <!--///////////////////// MY POINS pay - end //////////////////////////////-->
+
+            <!--///////////////////// REWADS - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_rewards"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:text="@string/title_my_rewards" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_5"
+                    android:layout_toEndOf="@+id/txt_rewards">
+
+                    <TextView
+                        android:id="@+id/txt_view_all"
+                        style="@style/TextView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/dimen_2"
+                        android:layout_toStartOf="@+id/arrow_rewards"
+                        android:text="@string/view_all" />
+
+                    <ImageView
+                        android:id="@+id/arrow_rewards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/contentdescription"
+                        android:importantForAccessibility="no"
+                        android:paddingTop="@dimen/dimen_2"
+                        android:src="@drawable/arrow_small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/no_rewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cover_height2"
+                    android:layout_below="@+id/txt_rewards"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:background="@drawable/home_page_components"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextViewRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/no_rewards" />
+
+                </RelativeLayout>
+
+
+                <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
+                    android:id="@+id/coverflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cover_height2"
+                    android:layout_below="@+id/txt_rewards"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    coverflow:coverHeight="@dimen/cover_height"
+                    coverflow:coverWidth="@dimen/cover_width"
+                    coverflow:maxScaleFactor="1.3"
+                    coverflow:reflectionGap="0px"
+                    coverflow:reflectionOpacity="0"
+                    coverflow:rotationThreshold="0.5"
+                    coverflow:scalingThreshold="0.5"
+                    coverflow:spacing="0.5" />
+
+            </RelativeLayout>
+            <!--///////////////////// REEAWDS - end //////////////////////////////-->
+
+            <!--///////////////////// MESSAGES - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_messages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/title_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_messages"
+                        style="@style/Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/title_messages" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/txt_messages">
+
+                        <TextView
+                            android:id="@+id/txt_view_all_messages"
+                            style="@style/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="@dimen/dimen_2"
+                            android:layout_toStartOf="@+id/arrow_messages"
+                            android:text="@string/view_all"
+                            android:textAllCaps="true"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/arrow_messages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/contentdescription"
+                            android:importantForAccessibility="no"
+                            android:paddingTop="@dimen/dimen_2"
+                            android:src="@drawable/arrow_small" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/noNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_page_components"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextViewRewardsInfoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/dimen_20"
+                        android:paddingBottom="@dimen/dimen_20"
+                        android:text="@string/msg_no_notification"
+                        android:textAllCaps="true" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/notificationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_messages"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@drawable/home_page_components"
+                    android:padding="@dimen/dimen_2">
+
+                    <LinearLayout
+                        android:id="@+id/messages_contents"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_5"
+                        app:ignore="RtlSymmetry">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            app:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/txt_message_title"
+                                style="@style/TextViewMessages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:drawableStartCompat="@drawable/ic_home_message"
+                                android:drawablePadding="5dp"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:lines="3"
+                                android:maxLines="3"
+                                android:text="@string/zero_poins" />
+
+                            <TextView
+                                android:id="@+id/txt_no_notification"
+                                style="@style/TextViewRed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_my_message_all"
+                            style="@style/TextViewTotalPointsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:text="@string/zero_poins"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_learn_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/messages_contents"
+                        android:background="@drawable/bottom_rounded_button_new">
+
+                        <TextView
+                            style="@style/TextViewSmallYellow14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/dimen_5"
+                            android:text="@string/learn_more" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--///////////////////// MESSAGES - end //////////////////////////////-->
+
+
+            <!--///////////////////// GIFT CARD - start //////////////////////////////-->
+            <RelativeLayout
+                android:id="@+id/layout_giftCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_gift_card"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:text="@string/title_gift_card"
+
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/gitf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_5"
+                    android:layout_toEndOf="@+id/txt_gift_card">
+
+
+                    <!--<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/txt_view_all_giftcards"-->
+                    <!--style="@style/TextView"-->
+                    <!--android:text="@string/view_all"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toStartOf="@+id/arrow_giftcard"-->
+                    <!--android:layout_marginEnd="@dimen/dimen_2"-->
+
+                    <!--/>-->
+
+                    <!--<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:id="@+id/arrow_giftcard"-->
+                    <!--android:contentDescription="@string/contentdescription"-->
+                    <!--android:src="@drawable/arrow_small"/>-->
+                </RelativeLayout>
+
+                <!--<com.relevantmobile.olgaskitchen.proba.BannerLayout-->
+                <!--android:id="@+id/recycler"-->
+                <!--android:layout_below="@+id/txt_gift_card"-->
+                <!--android:layout_marginTop="@dimen/dimen_5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/dimen_190"-->
+                <!--app:autoPlaying="true"-->
+                <!--app:centerScale="1.3"-->
+                <!--app:itemSpace="20"-->
+                <!--app:moveSpeed="1.8"/>-->
+
+
+            </RelativeLayout>
+            <!--///////////////////// GIFT CARD - end //////////////////////////////-->
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

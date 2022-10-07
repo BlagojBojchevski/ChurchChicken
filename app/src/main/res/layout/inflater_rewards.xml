@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10">
+
+        <ImageView
+            android:id="@+id/imgReward"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_80"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/reward_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/small" />
+
+        <LinearLayout
+                android:id="@+id/layoutRewardText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgReward"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5">
+
+            <TextView
+                    android:id="@+id/tvRewardName"
+                    style="@style/TextViewRedBold18"
+                    tools:text="Something something"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_2" />
+
+            <TextView
+                    android:id="@+id/tvRewardPoints"
+                tools:text="Something something"
+                    style="@style/TextView12BlackBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_2" />
+
+            <TextView
+                    android:id="@+id/tvRewardExpiration"
+                tools:text="Something something"
+                    style="@style/TextView12BlackBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/edit_text_color_hint" />
+</LinearLayout>

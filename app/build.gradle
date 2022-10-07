@@ -1,0 +1,183 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+androidExtensions {
+    experimental = true
+}
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.tts.gueststar"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 101
+        versionName "4.3.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        testOptions.unitTests.includeAndroidResources = true
+    }
+
+    signingConfigs {
+        releaseSignature {
+            storeFile file("/Users/blagoj/Downloads/church.keystore")
+            storePassword 'ljsWlzY'
+            keyAlias 'nextx'
+            keyPassword 'ljsWlzY'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    flavorDimensions "mode"
+
+    def rootUrl = null
+    def appKey = null
+    productFlavors {
+        aprel {
+            rootUrl = "https://app.relevantmobile.com"
+            appKey = "OLAB4sx1EyMeKSTx"
+            buildConfigField "String", "APPKEY", "\"" + appKey + "\""
+            buildConfigField "String", "BASE_URL", "\"" + rootUrl + "/api/v3/\""
+            buildConfigField "String", "BASE_URL_VNCR", "\"" + rootUrl + "/api/vncr/\""
+            buildConfigField "String", "FACEBOOK_URL", "\"" + rootUrl + "/url/68/facebook\""
+            buildConfigField "String", "TWITTER_URL", "\"" + rootUrl + "/url/68/twitter\""
+            buildConfigField "String", "INSTAGRAM_URL", "\"" + rootUrl + "/url/68/instagram\""
+            buildConfigField "String", "TERMS_OF_USE_URL", "\"" + rootUrl + "/terms_of_use?appkey=" + appKey + "\""
+            buildConfigField "String", "PRIVACY_URL", "\"" + rootUrl + "/privacy_policy?appkey=" + appKey + "\""
+            buildConfigField "String", "FAQ_URL",  "\"" + rootUrl + "/url/68/faq\""
+
+            dimension "mode"
+            applicationId "com.tts.gueststar"
+            minSdkVersion 21
+            signingConfig signingConfigs.releaseSignature
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles 'proguard-rules.pro'
+        }
+        trel {
+            rootUrl = "https://trelevant.relevantmobile.com"
+            appKey = "DqI28CZElvKhRzI4"
+            buildConfigField "String", "APPKEY", "\"" + appKey + "\""
+            buildConfigField "String", "BASE_URL", "\"" + rootUrl + "/api/v3/\""
+            buildConfigField "String", "BASE_URL_VNCR", "\"" + rootUrl + "/api/vncr/\""
+            buildConfigField "String", "FACEBOOK_URL", "\"" + rootUrl + "/url/146/facebook\""
+            buildConfigField "String", "TWITTER_URL", "\"" + rootUrl + "/url/146/twitter\""
+            buildConfigField "String", "INSTAGRAM_URL", "\"" + rootUrl + "/url/146/instagram\""
+            buildConfigField "String", "TERMS_OF_USE_URL", "\"" + rootUrl + "/terms_of_use?appkey=" + appKey + "\""
+            buildConfigField "String", "PRIVACY_URL", "\"" + rootUrl + "/privacy_policy?appkey=" + appKey + "\""
+            buildConfigField "String", "FAQ_URL", "\"" + rootUrl + "/url/146/faq\""
+
+            dimension "mode"
+            applicationId "com.tts.gueststar"
+            minSdkVersion 21
+            signingConfig signingConfigs.releaseSignature
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation ('androidx.appcompat:appcompat:1.5.0'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation ('androidx.recyclerview:recyclerview:1.2.1'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    implementation 'com.google.dagger:dagger:2.43.2'
+    implementation files('libs/olosdk-aprel-release.aar')
+    implementation files('libs/nsrsdkrelevant-aprel-release.aar')
+    implementation files('libs/relevantsdk-aprel-release.aar')
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.43.2'
+    kapt 'com.google.dagger:dagger-android-processor:2.43.2'
+    kapt 'com.google.dagger:dagger-compiler:2.43.2'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation ('com.google.android.material:material:1.6.1'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    implementation 'com.github.moondroid.coverflow:library:1.0'
+    implementation 'me.relex:circleindicator:2.1.6@aar'
+    implementation ('androidx.legacy:legacy-support-v4:1.0.0'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    implementation 'com.ebanx:swipe-button:0.8.3'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'com.google.zxing:core:3.5.0'
+    implementation 'com.facebook.android:facebook-android-sdk:12.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.7'
+    implementation 'com.google.firebase:firebase-core:21.1.0'
+
+    implementation 'com.google.firebase:firebase-perf:20.1.0'
+    implementation "androidx.core:core-ktx:1.8.0"
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+//    implementation project(':nsrsdkrelevant')
+//    implementation project(':relevantsdk')
+//    implementation project(':olosdk')
+
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+
+    implementation 'com.appboy:android-sdk-ui:13.1.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation ('androidx.test:runner:1.4.0'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    testImplementation 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0'
+    testImplementation "org.robolectric:robolectric:4.2.1"
+}
+apply plugin: 'com.google.gms.google-services'

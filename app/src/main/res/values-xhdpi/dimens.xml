@@ -1,0 +1,28 @@
+<resources>
+    <dimen name="dimen_5_bottom_navigation">7dp</dimen>
+    <dimen name="dimen_2">4dp</dimen>
+    <dimen name="dimen_5">10dp</dimen>
+    <dimen name="dimen_7">14dp</dimen>
+    <dimen name="dimen_10">20dp</dimen>
+    <dimen name="dimen_15">30dp</dimen>
+    <dimen name="dimen_20">40dp</dimen>
+    <dimen name="dimen_35">63dp</dimen>
+    <dimen name="dimen_40">72dp</dimen>
+    <dimen name="dimen_42">74dp</dimen>
+    <dimen name="dimen_50">90dp</dimen>
+    <dimen name="dimen_150">120dp</dimen>
+    <dimen name="dimen_viewpager_height">155dp</dimen>
+
+    <dimen name="dimen_100">130dp</dimen>
+    <dimen name="dimen_80">104dp</dimen>
+
+    <dimen name="dimen_190">230dp</dimen>
+    <dimen name="dimen_120">160dp</dimen>
+
+    <dimen name="cover_width">195dp</dimen>
+    <dimen name="cover_height">185dp</dimen>
+    <dimen name="cover_height2">240dp</dimen>
+    <dimen name="dimen_4">6dp</dimen>
+    <dimen name="dimen_300">380dp</dimen>
+    <dimen name="dimen_500">220dp</dimen>
+</resources>

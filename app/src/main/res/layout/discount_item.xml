@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/discount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginEnd="@dimen/dimen_10"
+        >
+
+    <TextView
+            android:id="@+id/discount_name"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/txt_discount_price"
+            android:paddingEnd="@dimen/dimen_2"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+
+    <TextView
+            android:id="@+id/txt_discount_price"
+            style="@style/TextViewRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zero_dolars"
+            android:visibility="gone"
+            tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>

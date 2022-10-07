@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:splitMotionEvents="false">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        android:splitMotionEvents="false">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:contentDescription="@string/back_button"
+            android:src="@drawable/arrow_white_left" />
+
+        <TextView
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_locations" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutTitle"
+            android:splitMotionEvents="false">
+
+        <RelativeLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            <EditText
+                    android:id="@+id/etLocationSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:background="@drawable/search_field"
+                    android:drawableStart="@drawable/search_icon"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:hint="@string/hint_location_search"
+                    android:imeOptions="actionDone"
+                    android:inputType="textVisiblePassword"
+                    tools:ignore="Autofill"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:paddingEnd="@dimen/dimen_15"
+                    />
+
+            <ImageButton
+                    android:id="@+id/btn_clear_search"
+                    android:contentDescription="@string/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:background="@drawable/clear_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/layoutLocationsOn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/one"
+                android:splitMotionEvents="false">
+
+            <TextView
+                    android:id="@+id/tvPickLocation"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:text="@string/select_fav_locations"
+                    android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLocations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvPickLocation"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:splitMotionEvents="false" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/layoutLocationsOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/one"
+                android:layout_marginTop="@dimen/dimen_50"
+                android:orientation="vertical"
+                android:splitMotionEvents="false"
+                android:visibility="gone">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@string/contentdescription"
+                    android:src="@drawable/no_location" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations1"
+                    style="@style/TextView22Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_1"
+                    android:textAlignment="center" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations2"
+                    style="@style/TextViewNoLocationsRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_2"
+                    android:textAlignment="center" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations3"
+                    style="@style/TextView22Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_3"
+                    android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/tvNoLocationsFound"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/no_locations_found_text"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

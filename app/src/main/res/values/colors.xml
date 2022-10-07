@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#2B2C2E</color>
+    <color name="colorPrimaryDark">#2B2C2E</color>
+    <color name="colorAccent">#2B2C2E</color>
+
+    <color name="red">#AB2328</color>
+    <color name="red_red">#FF0C0C</color>
+    <color name="brownish_red">#9a3324</color>
+    <color name="red50opacity">#809E3223</color>
+    <color name="black">#2B2C2E</color>
+    <color name="white">#ffffff</color>
+    <color name="black_lite">#4A4B4D</color>
+    <color name="black50opacity">#802B2C2E</color>
+    <color name="silver">#4E4E4F</color>
+    <color name="edit_text_color">#616161</color>
+    <color name="edit_text_color_hint" tools:ignore="MissingDefaultResource">#96616161</color>
+
+    <color name="blue">#003EFF</color>
+    <color name="signiture_bacground">#E5E5E5</color>
+
+    <color name="dark_blue50opacity">#80999392</color>
+    <color name="yellow">#F1C400</color>
+    <color name="squash">#e0a526</color>
+    <color name="yellow_oragne">#f79c18</color>
+    <color name="dark_blue">#395382</color>
+    <color name="text_color">#999392</color>
+    <color name="background_color">#E7E5E4</color>
+
+    <color name="line_color">#BFCBD1</color>
+    <color name="blue2">#382E2C</color>
+
+</resources>

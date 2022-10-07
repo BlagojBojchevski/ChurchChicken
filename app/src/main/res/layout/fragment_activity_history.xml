@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:contentDescription="@string/contentdescription"
+            android:padding="@dimen/dimen_5"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_history" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionbar"
+            android:orientation="vertical">
+
+
+        <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:scrollbars="none"
+                android:visibility="gone"
+                tools:ignore="UselessParent">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <RelativeLayout
+                        android:id="@+id/btn_loyalty_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/txt_loyalty"
+                                style="@style/TextViewRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_5"
+                                android:text="@string/title_loyalty_activity" />
+
+                        <View
+                                android:id="@+id/line_loyalty"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/red" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/btn_order_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/txt_order"
+                                style="@style/TextViewDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_5"
+                                android:text="@string/title_order_history" />
+
+                        <View
+                                android:id="@+id/line_order"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/red"
+                                android:visibility="gone" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/btn_payment_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/txt_payment"
+                                style="@style/TextViewDark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_5"
+                                android:text="@string/title_mobile_payment" />
+
+                        <View
+                                android:id="@+id/line_payment"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/red"
+                                android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/edit_text_color_hint"
+                android:visibility="gone" />
+
+
+        <TextView
+                android:id="@+id/txt_loyalty_text"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/txt_loyalty"
+                android:visibility="gone" />
+
+
+        <LinearLayout
+                android:id="@+id/layout_orders"
+                android:layout_width="match_parent"
+
+                android:layout_height="?actionBarSize"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <RelativeLayout
+                        android:id="@+id/btn_fav_orders"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                    <TextView
+                            android:id="@+id/txt_fav_orders"
+                            style="@style/TextViewWhite20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/fav_orders" />
+
+                    <View
+                            android:id="@+id/line_fav"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/yellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/btn_all_orders"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <View
+                            android:visibility="gone"
+                            android:id="@+id/line_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/yellow" />
+                    <TextView
+                            android:id="@+id/txt_all_orders"
+                            style="@style/TextViewDarkHintBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/all_orders" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@color/edit_text_color_hint" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvActivityHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:contentDescription="@string/close_button"
+            android:padding="@dimen/dimen_5"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/order_text" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_5"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/bag"
+                android:padding="@dimen/dimen_5"
+                android:src="@mipmap/icon_order_2" />
+
+
+            <TextView
+                android:id="@+id/basket_number"
+                style="@style/TextViewRewardsInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/zero" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/aamann"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMenuCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_addrtess"
+            android:layout_marginTop="@dimen/dimen_5" />
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_addrtess"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black">
+
+            <ImageView
+                android:id="@+id/pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:contentDescription="@string/contentdescription"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_place_24px" />
+
+            <TextView
+                android:id="@+id/address_name"
+                style="@style/TextViewSmallYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_toEndOf="@+id/pin"
+                tools:text="Some address" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5">
+
+    <LinearLayout
+            android:id="@+id/layoutSupportLocations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_2">
+
+        <TextView
+            android:id="@+id/tvLocationName"
+            style="@style/TextViewLocationsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tvLocationDistance" />
+
+        <TextView
+                android:id="@+id/tvLocationDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:visibility="invisible"
+                style="@style/TextViewHelserifMedium18"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/tvLocationAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewSupportLocationsFields"/>
+
+    <TextView
+            android:id="@+id/tvLocationState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewSupportLocationsFields"/>
+
+    <TextView
+            android:id="@+id/tvLocationWorkingHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewSupportLocationsFields"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

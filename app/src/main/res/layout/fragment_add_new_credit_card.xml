@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black">
+
+
+        <TextView
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_add_credit_card" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:contentDescription="@string/back_button"
+            android:padding="@dimen/dimen_5"
+            android:src="@drawable/arrow_white_left" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/save_credit_card"
+            android:layout_below="@+id/actionbar">
+
+
+        <LinearLayout
+                android:id="@+id/layout_update_card_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/yellow" />
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10">
+
+                <ImageView
+                        android:id="@+id/card_icon1"
+                        android:layout_width="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/contentdescription"
+                        android:src="@drawable/no_card" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/card_icon1"
+                        android:orientation="vertical">
+
+
+                    <TextView
+                            style="@style/TextViewNBProGray14Red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/credit_card_number" />
+
+                    <com.tts.gueststar.utility.CustomCardNumberEditText
+                            android:id="@+id/et_credit_card_update"
+                            style="@style/TextViewDark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/credit_card_number"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/dimen_2"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_2"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:background="@color/yellow" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+
+                    <TextView
+                            style="@style/TextViewNBProGray14Red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expiration_date" />
+
+                    <RelativeLayout
+                            android:id="@+id/btn_expiration_date_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5">
+
+                        <TextView
+                                android:id="@+id/expiration_date_update"
+                                style="@style/TextViewDarkHint"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/epmty_expire_date"
+
+                                />
+
+
+                        <ImageView
+                                android:id="@+id/icon_arrow"
+                                android:layout_width="wrap_content"
+                                android:importantForAccessibility="no"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/contentdescription"
+                                android:src="@drawable/arow_down" />
+
+                        <ImageView
+                                android:id="@+id/icon_clear_expiration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/contentdescription"
+                                android:src="@drawable/clear_icon"
+                                android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutCvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:background="@color/yellow" />
+
+
+                <TextView
+                        style="@style/TextViewNBProGray14Red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/hint_cvv" />
+
+                <com.tts.gueststar.utility.CustomCVVEditText
+                        android:id="@+id/etCvv"
+                        style="@style/TextViewDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_cvv"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="@dimen/dimen_5" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:background="@color/yellow" />
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="vertical">
+
+
+                <TextView
+                        style="@style/TextViewNBProGray14Red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:text="@string/hint_zip" />
+
+                <com.tts.gueststar.utility.CustomZipCodeEditText
+                        android:id="@+id/etSignUpZip"
+                        style="@style/TextViewDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_zip"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:padding="@dimen/dimen_5" />
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:background="@color/yellow" />
+
+
+            <LinearLayout
+                    android:id="@+id/layout_save_on_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+
+                <CheckBox
+                        android:id="@+id/cbSaveCreditCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/checkbox_selector_order"
+                        android:padding="@dimen/dimen_2" />
+
+
+                <TextView
+                        style="@style/TextView16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:text="@string/save_credit_card" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+            android:id="@+id/save_credit_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+        <Button
+                android:id="@+id/btn_save_credit_card"
+                style="@style/BottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save" />
+
+    </LinearLayout>
+
+</RelativeLayout>

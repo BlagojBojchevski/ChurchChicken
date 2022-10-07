@@ -1,0 +1,541 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="facebook_app_id">495734800984011</string>
+    <string name="fb_login_protocol_scheme">fb495734800984011</string>
+
+
+    <string name="app_name">Church\'s Texas Chicken</string>
+    <string name="tutorial">TUTORIAL</string>
+    <string name="how_to_eard_rewards">How to place an order</string>
+    <string name="how_to_eard_rewards_txt">Select a location to start order.</string>
+    <string name="how_to_redeem_rewards">Add items to your order</string>
+    <string name="how_to_redeem_rewards_txt">Select your favorite meal.
+    </string>
+    <string name="how_to_redeem_rewards_txt2">Swipe the Redeem Now button and then\nprovide your phone to apply the\nreward to your check
+    </string>
+    <string name="how_to_pay_with_phone">Complete your order</string>
+    <string name="how_to_pay_with_phone_txt">When checking out, you will be able to Save Your Order as a Favorite. Add a Credit Card and Select the Order Method. You can also enter an Offer Code and Redeem a Promotion.</string>
+    <string name="handle_blank_pop_up">We\'re sorry! Unfortunately we are not able to process your request. Please try
+        again in a bit. If the problem persists please reach out to our technical team via Contact Us.
+    </string>
+    <string name="error_network_connection">Please check your internet connection!
+    </string>
+    <string name="queued_rewards_text">ACTIVATED REWARDS\nTap a reward to redeem in store.
+    </string>
+    <string name="turn_on_locations_text">Please turn on Location Services(in Settings or in Settings>Privacy) to allow
+        Church\'s Kitchen to reward you
+    </string>
+    <string name="rewards_text">REWARD WALLET\nTap a highlighted reward to activate.</string>
+    <string name="error_no_locations">No locations found</string>
+    <string name="got_it">Got it</string>
+    <string name="get_started">Let\'s get started</string>
+    <string name="login">Log in</string>
+    <string name="logout"><u>Log out</u></string>
+    <string name="delete_account"><u>Delete Account</u></string>
+    <string name="signup">Sign up</string>
+    <string name="update">Update</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="redeem_now">Redeem now</string>
+    <string name="pay_earn">Mobile Pay / Earn Points</string>
+    <string name="learn_more">Learn more</string>
+    <string name="done">Done</string>
+    <string name="submit">Submit</string>
+    <string name="txt_promo_code_1">Have a promo code?</string>
+    <string name="txt_promo_code_2">Enter your code here.</string>
+    <string name="txt_promo_code_3">Case sensitive, no spaces please</string>
+    <string name="txt_promo_code_4">Code not working?</string>
+    <string name="txt_contact_us"><u>CONTACT US</u></string>
+
+    <string name="txt_refer_friend_1">Refer a friend</string>
+    <string name="txt_refer_friend_2">with your unique code.</string>
+    <string name="txt_refer_friend_3">Share Your Invite Code</string>
+    <string name="copy">Copy</string>
+
+    <string name="code_copied">CODE COPIED TO CLIPBOARD</string>
+
+    <string name="save_for_later">Save for later</string>
+
+    <!--Edit text hints-->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password
+        <small>(Min. 7 Characters)</small>
+    </string>
+    <string name="hint_first_name">First Name (Min. 2 Characters)</string>
+    <string name="hint_last_name">Last Name (Min. 2 Characters)</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_mobile_phone_number">Mobile Phone Number</string>
+    <string name="hint_zip">Zip Code</string>
+    <string name="hint_gift_card">Gift Card Number</string>
+    <string name="hint_cvv">CVV</string>
+    <string name="hint_favorite_location">Favorite Location</string>
+    <string name="hint_sec_question">Security Question</string>
+    <string name="hint_sec_answer">Security Answer</string>
+    <string name="hint_birthday">Birthday</string>
+    <string name="hint_birthday_date">MM.DD.YYYY</string>
+    <string name="hint_referral">Referral Code (optional)</string>
+    <string name="hint_location_search">City, State or Zipcode</string>
+    <string name="hint_old_password">Old Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_new_password">New Password
+        <small>(Min. 7 Characters)</small>
+    </string>
+    <string name="hint_promo_code">Enter Promo Code</string>
+    <string name="hint_comments">Comments</string>
+    <string name="hint_discount_code">Enter Offer Code</string>
+    <string name="hint_fav_name">My Favorite Order</string>
+
+    <!--Fragment titles-->
+    <string name="title_transfer_card">TRANSFER CARD</string>
+    <string name="title_promo_code">PROMO CODE</string>
+    <string name="title_sign_up">SIGN UP</string>
+    <string name="title_log_in">LOG IN</string>
+    <string name="title_forgot_password">FORGOT PASSWORD</string>
+    <string name="title_update_password">UPDATE PASSWORD</string>
+    <string name="title_locations">LOCATIONS</string>
+    <string name="title_account">ACCOUNT</string>
+    <string name="title_profile">PROFILE</string>
+    <string name="title_more">MORE</string>
+    <string name="title_support">SUPPORT</string>
+    <string name="title_connect_social">CONNECT WITH US ON SOCIAL</string>
+    <string name="title_personal_settings">PERSONAL</string>
+    <string name="title_rewards">REWARDS</string>
+    <string name="title_promotions">PROMOTIONS</string>
+    <string name="title_my_favorite_location">MY FAVORITE LOCATION</string>
+    <string name="title_my_points">MY POINTS BALANCE</string>
+    <string name="title_my_balance">Church Points</string>
+    <string name="title_payON">pay ON</string>
+    <string name="title_messages">MESSAGES</string>
+    <string name="title_gift_card">E-GIFT CARD</string>
+    <string name="title_pay_earn">PAY AND EARN POINTS</string>
+    <string name="title_pay_earn_">PAY/EARN</string>
+    <string name="title_facebook">FACEBOOK</string>
+    <string name="title_twitter">TWITTER</string>
+    <string name="title_instagram">INSTAGRAM</string>
+    <string name="title_terms_of_use">TERMS OF USE</string>
+    <string name="title_privacy_policy">PRIVACY POLICY</string>
+    <string name="title_contact_us">CONTACT US</string>
+    <string name="title_store_feedback">STORE FEEDBACK</string>
+    <string name="title_app_support">APP SUPPORT</string>
+    <string name="title_how_did_we_do">HOW DID WE DO?</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_submit_receipts">SUBMIT RECEIPT</string>
+
+
+    <string name="show_details">Show Details</string>
+    <string name="hide_details">Hide Details</string>
+
+    <string name="no_rewards">You do not have any rewards yet!</string>
+    <string name="txt_tax">*Tax will be added at checkout</string>
+    <string name="item">Item</string>
+    <string name="items">Item\'s</string>
+    <string name="zero">0</string>
+    <string name="zero_dolars">$0.00</string>
+    <string name="one">1</string>
+    <string name="zero_poins">-</string>
+    <string name="pay_with_phone">Pay with phone?</string>
+    <string name="balance">Balance:</string>
+    <string name="points">Points</string>
+    <string name="scan_at_register">Scan at the register to earn rewards</string>
+    <string name="scan_at_register_pay">Scan at the register to pay\nand earn rewards</string>
+    <string name="earn_pay_desc">Each code is good for 1 transaction only.\nPlease tap Refresh button above for a new
+        code.
+    </string>
+    <string name="pay_tutorial_txt_1">Pay and Earn points at the same time!</string>
+    <string name="pay_tutorial_txt_2">Step 1: Add a preferred\npayment method</string>
+    <string name="pay_tutorial_txt_3">Step 2: Scan or enter your receipt code to pay and earn!</string>
+    <string name="pay_tutorial_txt_4">Easy right? Get started below</string>
+
+    <string name="view_all">VIEW ALL</string>
+    <string name="messages">Messages</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="update_password">Update Password</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="activity_history">Order History</string>
+    <string name="preferences">Preferences</string>
+    <string name="gift_cards">Gift Cards</string>
+    <string name="refer_a_friend">Refer a Friend</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="submit_receipt">Submit Receipt</string>
+    <string name="transfer_loaylty">Transfer Loyalty Card</string>
+    <string name="tutorial_">Tutorial</string>
+    <string name="faq">FAQ</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="choose_existing">Choose existing</string>
+    <string name="take_new_photo">Take new image</string>
+    <string name="save">Save</string>
+    <string name="change"><u>CHANGE</u></string>
+    <string name="camera_permissions_message">Camera permissions are required for this app</string>
+    <string name="text_ok">OK</string>
+    <string name="dont_allow_text">DON\'T ALLOW</string>
+    <string name="camera_permissions_denied">Please go to the phone settings and allow the permissions for camera in
+        order to continue
+    </string>
+    <string name="storage_permissions_denied">Please go to the phone settings and allow the permissions for storage in
+        order to continue
+    </string>
+    <string name="no_locations_found_text">Sorry, we could not find a store near that location. Please try again.
+    </string>
+    <string name="text_continue">Continue</string>
+
+    <!--Api calls-->
+    <string name="ApiCall_validate_token">/user/validate_token</string>
+    <string name="ApiCall_cloudconnect_settings">cloudconnect/setting</string>
+
+    <!--content descriptions-->
+    <string name="tutorial_image">tutorial image</string>
+    <string name="navigation_menu">navigation menu</string>
+    <string name="welccome_logo">welcome logo</string>
+    <string name="arrow">arrow</string>
+
+    <string name="home">home</string>
+    <string name="rewards">rewards</string>
+    <string name="order">order</string>
+    <string name="account">account</string>
+    <string name="image_car">image car</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_iten">menu item image</string>
+    <string name="submenu_iten">item image</string>
+    <string name="contentdescription">contentDescription</string>
+    <string name="contentpinlocation">location icon</string>
+    <string name="contentLogo">Church Chicken logo</string>
+    <string name="reward_description">reward image</string>
+    <string name="bag">Order Bag</string>
+    <string name="map_button">map</string>
+    <string name="list_button">listview</string>
+    <string name="slader_image">slider image</string>
+    <string name="profile_image">profile image</string>
+    <string name="clear_text">clear text</string>
+
+    <string name="order_asap_button">order for asap</string>
+    <string name="order_later_button">order for later</string>
+
+    <string name="delete_credit">delete</string>
+
+    <string name="back_button">back</string>
+    <string name="close_button">close</string>
+    <string name="clear">clear</string>
+
+    <!--Sign Up-->
+    <string name="text_opt_in">Opt-in to receive the latest email updates and offers</string>
+    <string name="text_tou_pp_1">I have read and agree to Church\'s Texas Chicken</string>
+    <string name="text_tou_pp_2">TERMS OF USE</string>
+    <string name="text_tou_pp_3">and</string>
+    <string name="text_tou_pp_4">PRIVACY POLICY</string>
+
+    <!--Locations-->
+    <string name="select_submit_receipt_locations">Choose a location and upload your receipt</string>
+    <string name="select_fav_locations">Tap to select your favorite location</string>
+    <string name="no_locations_text_1">Use the search bar above or</string>
+    <string name="no_locations_text_2"><u>turn on location services</u></string>
+    <string name="no_locations_text_3">to find locations near you.</string>
+    <string name="location_state_text">%1$s, %2$s %3$s</string>
+    <string name="location_distance_text">%1$smi</string>
+    <string name="location_distance_text2">%1$s miles away</string>
+    <string name="location_hours_text">Hours of Operation: %1$s - %2$s</string>
+    <string name="directions_text">DIRECTIONS</string>
+    <string name="call_text">CALL</string>
+    <string name="order_text">ORDER</string>
+    <string name="directions_text_small">Directions</string>
+    <string name="call_text_small">Call</string>
+    <string name="order_text_small"><u>Order</u></string>
+    <string name="point_balance_text"> Always find your latest offers here! Add an eligible product to your order and tap the yellow “Redeem a Promotion” button to redeem before checkout. Promotions available only at participating locations.</string>
+    <string name="no_points_text">Keep earning Church’s Points for every mobile order and providing your phone number for in-store orders.</string>
+    <string name="my_activity_text">My Activity History.</string>
+    <string name="scan_code_desc">Provide your phone number to earn on your order</string>
+    <string name="refresh">Refresh</string>
+    <string name="add_payment">Add a Credit Card to continue paying with the app</string>
+    <string name="rewards_free">FREE</string>
+    <string name="msg_no_notification">You don\'t have any notifications yet.</string>
+
+    <string name="in_app_only">In App Only.</string>
+    <string name="expires_value">Expires %1$s</string>
+    <string name="reward_slide_text">Slide only when you are ready to redeem</string>
+    <string name="show_code_text">Show Code at Register</string>
+
+    <string name="manage_payment">Manage payment</string>
+
+    <string name="EMAILCONTACT_US">churchschicken@rlvt.net</string>
+    <string name="EMAILSUBJECTFAQ">Church\'s App Support</string>
+    <string name="store_feedback">Restaurant feedback</string>
+    <string name="app_support">App support</string>
+    <string name="app_support_subject">Church\'s App Support</string>
+    <string name="app_support_email">churchschicken@rlvt.net</string>
+
+    <string name="title_manage_payment">MANAGE PAYMENTS</string>
+    <string name="title_add_credit_card">ADD CREDIT CARD</string>
+    <string name="title_add_gift_card">ADD GIFT CARD</string>
+    <string name="title_card_summary">CARD SUMMARY</string>
+    <string name="add_credit_card">Add Credit Card</string>
+    <string name="add_gift_card">Add Gift Card</string>
+    <string name="delete_card">Delete card</string>
+    <string name="credit_card_number">Credit Card Number</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="choose_location_text_support">Choose a location you are contacting us about</string>
+    <string name="text_no_specific_location">If you are not writing about a specific \n location, tap continue below
+    </string>
+
+    <string name="choose_credit_card">CHOOSE CREDIT CARD</string>
+    <string name="choose_gift_card">CHOOSE GIFT CARD</string>
+
+    <string name="title_activity_history">ORDER HISTORY</string>
+    <string name="title_loyalty_activity">LOYALTY ACTIVITY</string>
+    <string name="title_order_history">ORDER HISTORY</string>
+    <string name="title_mobile_payment">MOBILE PAYMENT</string>
+
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="set">Set</string>
+    <string name="date_picker_title">Pick Expiration Date</string>
+    <string name="exp_date_field">%1s</string>
+    <string name="ending_with_field">XXXX-XXXX-XXXX-%1s</string>
+    <string name="ending_with_field_summary">**** %1s</string>
+    <string name="exp_date_field_value">0%1s/%2s</string>
+    <string name="exp_date_field_value_nonzero">%1s/%2s</string>
+
+    <string name="reward_points">%1$s points</string>
+    <string name="contact_us_faq">Contact us at churchschicken@rlvt.net</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="ApiCall_customers">/Customers</string>
+    <string name="ApiCall_payments">Payment</string>
+    <string name="ApiCall_payment_info">/user/onlineorder/payment_methods</string>
+    <string name="ApiCall_company_settings">Settings/Company</string>
+    <string name="epmty_expire_date">MM/YYYY</string>
+    <string name="success_remove_credit_card">Your credit card has been successfully removed.</string>
+    <string name="success_added_credit_card">Your credit card information was successfully saved.</string>
+
+    <string name="txt_loyalty">Recent transactions can take up to 24 hours\nto appear on this screen.</string>
+
+    <string name="are_you_enjoy">Are you enjoing our app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ask_me_later">Ask me later</string>
+    <string name="dont_ask_me_again">Don\'t ask me again</string>
+
+    <string name="how_you_dining">How are you dining with us?</string>
+    <string name="pickup">Pickup</string>
+    <string name="catering">Curbside</string>
+    <string name="delivery">Delivery</string>
+    <string name="select">Select</string>
+    <string name="thank_you">Thank You</string>
+    <string name="for_your_feedback">for your feedback!</string>
+    <string name="for_your_payment">for your payment of</string>
+    <string name="next_time">maybe next time!</string>
+
+    <string name="cannot_acceps_orders_error">Online ordering is unavailable at this location. We’ll notify you once it’s available.
+    </string>
+
+    <string name="door_dash">DoorDash</string>
+    <string name="caviar">Caviar</string>
+    <string name="uber_eats">UberEATS</string>
+
+    <string name="remove"><u>Remove</u></string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="we_are_uploading">We\'re uploading\nyour receipt</string>
+
+    <string name="delivery_address">DELIVERY ADDRESS</string>
+    <string name="enter_delivery_address">Enter your delivery address</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_suite">Suite/APT</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">State</string>
+    <string name="add_delivery_address">Add delivery address</string>
+    <string name="save_address">Save this address for future use</string>
+
+    <string name="what_type_of_catering">What type of catering\norder would you\nlike to place?</string>
+    <string name="txt_catering_1">- Olga\'s catering must be ordered 24-hours in advance.</string>
+    <string name="txt_catering_2">- For same day service, please call the restaurant and we\'ll do everything we can to
+        accommodate you.
+    </string>
+    <string name="txt_catering_3">- For orders larger than $1500, please call or visit the restaurant to place your
+        order.
+    </string>
+    <string name="are_u_sure">Are you sure you want to delete this delivery address?</string>
+    <string name="ChooseTxt">Choose</string>
+    <string name="SelectDateAndTime">Select Date &amp; Time</string>
+
+    <string name="search">Search</string>
+    <string name="additional_info">ADDITIONAL INFORMATION</string>
+    <string name="redeemed_rewad_desc">This reward has been activated and can be\napplied next time you make an eligible\npurchase by providing your phone number at\nthe thime of payment.</string>
+
+
+    <string name="earn_rewards">Earn rewards</string>
+    <string name="pay_and_earn">PAY AND EARN</string>
+    <string name="scan_code">Scan code</string>
+    <string name="enter">Enter</string>
+    <string name="or">or</string>
+    <string name="camera_header_text">Center barcode below to scan</string>
+
+    <string name="enter_code">Enter Code</string>
+    <string name="in_store_curbside">In store/Curbside orders</string>
+
+    <string name="olgas_rewaards_card">OLGA\'S REWARDS CARD</string>
+    <string name="transfer_card_desc">Transfer your rewards card points</string>
+    <string name="reward_card">Rewards Card Number</string>
+
+    <string name="repeat_reward_card">Repeat Card Number</string>
+    <string name="tip">Tip</string>
+    <string name="adjust_tip">Adjust Tip</string>
+    <string name="_15">15%</string>
+    <string name="_0_0">$0.0</string>
+    <string name="_18">25%</string>
+    <string name="_20">20%</string>
+    <string name="other_namount">Other</string>
+    <string name="otherAmount">Other\nAmount</string>
+    <string name="pay">PAY</string>
+    <string name="signature">SIGNATURE</string>
+    <string name="discount">DISCOUNT</string>
+    <string name="total">Total</string>
+    <string name="total_sum">Total: $</string>
+    <string name="sub_total">Subtotal</string>
+    <string name="tax">Tax</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="value_in_dollars">$%1$s</string>
+    <string name="your_check_total">CHECK TOTAL</string>
+    <string name="payment_title">PAYMENT</string>
+    <string name="payment_confirmed">PAYMENT CONFIRMED</string>
+    <string name="payed_check_text">This check was already paid for.</string>
+
+    <string name="payment_complete_desc">Please allow time for your\npoints to be processed.</string>
+
+    <string name="pay_earn_desc">Please share your phone number before\nyou scan to pay if you have activated rewards\nyou would like to use.</string>
+    <string name="btn_get_started">Get started</string>
+    <string name="submit_receipt_desc">To get credit for your purchase, you will need to\nenter 5 pieces of information from your receipt.\nYou will receive credit for qualifying Rewards\nin Progress.</string>
+    <string name="txt_enter_date_time">Enter Date and Time from Receipt</string>
+    <string name="txt_enter_receipt_number">Enter Receipt Number from Receipt</string>
+    <string name="txt_enter_subtotal">Enter Subtotal from Receipt</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="missing_points_future_date">Please select a date that is not in the future</string>
+    <string name="set_date">Set date</string>
+    <string name="set_time">Set time</string>
+    <string name="receipt_number">Receipt Number</string>
+
+    <string name="refer_code_txt">Download the @Church App to earn great rewards. Use my code when you sign up:</string>
+    <string name="CAMERA_ERROR">Rear Facing Camera Unavailable</string>
+    <string name="please_review_receipt">Please review what you have entered</string>
+
+
+    <string name="order_summary">ORDER SUMMARY</string>
+    <string name="review_order">REVIEW ORDER</string>
+    <string name="location">Location</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="capture">Capture image</string>
+    <string name="update_image">Update image</string>
+    <string name="check_paid">Sorry, this check has already been paid. If you forgot to provide your phone number for Church Points, please submit your receipt through the app.</string>
+
+    <string name="receipt_submited">Your receipt was submitted</string>
+    <string name="select_delivery_address">Select your delivery address</string>
+    <string name="enter_car_info">Enter your car info</string>
+
+    <string name="proceed_to_order">Proceed to order</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="color">Color</string>
+
+    <string name="mode_pickup">pickup</string>
+    <string name="mode_delivery">delivery</string>
+    <string name="mode_curbside">curbside</string>
+    <string name="mode_dispatch">dispatch</string>
+
+    <string name="pickup_time">Pickup Time</string>
+    <string name="street_address">Street Address</string>
+    <string name="building_name">Building Name/Suite/Apt</string>
+    <string name="other_instructions">Other Instructions (cross street,\n buzzer #, etc)</string>
+
+    <string name="saved_addresses">Saved Addresses</string>
+    <string name="add_new_address">Add New Address</string>
+
+    <string name="add_to_bag">Add to bag</string>
+    <string name="special_instructions">SPECIAL INSTRUCTIONS</string>
+    <string name="special_instructions1">Special Instructions</string>
+
+    <string name="special_desc_1">Enter up to</string>
+    <string name="special_desc_2">characters</string>
+    <string name="special_desc">*No price altering substitutions/additions please*</string>
+
+
+    <string name="keep_ordering">Keep ordering</string>
+    <string name="check_out">Check out</string>
+    <string name="check_for_rewards">REDEEM A PROMOTION</string>
+
+    <string name="order_method">Order Method</string>
+    <string name="order_asap">Order For ASAP</string>
+    <string name="order_later">Order For Later</string>
+    <string name="car_info">Car Info</string>
+    <string name="del_address">Delivery Address</string>
+
+    <string name="minutes">minutes</string>
+    <string name="add_tip">Add Tip</string>
+    <string name="place_order">Place order</string>
+    <string name="apply">Apply</string>
+    <string name="save_to_favorite"><u>Save to my Favorite Orders</u></string>
+    <string name="txt_discount">Discount</string>
+    <string name="txt_reward">Reward:</string>
+    <string name="pay_credit_card">Pay with Credit Card</string>
+    <string name="pay_gift_card">Pay with Gift Card</string>
+    <string name="pay_restaunrat">Pay at Restaurant</string>
+
+    <string name="save_as_default">Save as Default Favorite Order</string>
+    <string name="save_credit_card">Save Credit Card</string>
+
+    <string name="type_stored_value">storedvalue</string>
+    <string name="type_credit_card">creditcard</string>
+    <string name="type_payinstore">payinstore</string>
+    <string name="type_cash">cash</string>
+    <string name="type_giftcard">giftcard</string>
+    <string name="type_billingaccount">billingaccount</string>
+
+    <string name="order_number">Order Number</string>
+    <string name="reorder">Reorder</string>
+
+    <string name="all_orders">All Orders</string>
+    <string name="fav_orders">Favorite Orders</string>
+    <string name="order_ready">Your order will be ready at</string>
+    <string name="order_delivery">Your order will be delivered at</string>
+
+    <string name="title_rewards_wallet">REWARD WALLET</string>
+    <string name="txt_select_rewards">Select reward to redeem</string>
+    <string name="txt_no_rewards">No rewards yet!</string>
+
+    <string name="txt_no_rewards_2">Keep earning Church\'s Points for every mobile\norder and providing your phone number for\nin-store orders</string>
+    <string name="title_my_rewards">MY PROMOTIONS</string>
+
+    <string name="seq_question_1">What was your first car?</string>
+    <string name="seq_question_2">What was your high school mascot?</string>
+    <string name="seq_question_3">What street were you raised on?</string>
+    <string name="seq_question_4">What is your mother\'s maiden name?</string>
+    <string name="seq_question_5">What was your first pet\'s name?</string>
+    <string name="seq_question_6">What was your first pet\'s name?</string>
+    <string name="seq_question_7">Who was your first grade teacher?</string>
+    <string name="seq_question_8">What town were you born in?</string>
+    <string name="seq_question_9">What was your first job?</string>
+    <string name="seq_question_10">What is your favorite sport?</string>
+    <string name="seq_question_11">What is your favorite movie?</string>
+
+    <string name="transfer_text">You have changed the restaurant. Do you want to keep the items from your previous selection?</string>
+    <string name="reward_disocunt">Reward discount will be applied at checkout.</string>
+    <string name="your_reward">Your reward</string>
+    <string name="asap">asap</string>
+
+
+    <string name="no_fav_selected">No Favorite Location</string>
+
+    <string name="facebook">facebook</string>
+    <string name="twitter">twitter</string>
+    <string name="instagram">instagram</string>
+
+
+    <string name="spanable_1">I have read and agree to Church\'s Texas Chicken</string>
+    <string name="spanable_2"><u>TERMS OF USE</u></string>
+    <string name="spanable_3">&#160;and&#160;</string>
+    <string name="spanable_4"><u>PRIVACY POLICY.</u></string>
+    <string name="txt_remove_1">Are you sure you want to remove</string>
+    <string name="txt_remove_2">from your basket?</string>
+
+    <string name="plus_quantity">plus quantity</string>
+    <string name="minus_quantity">minus quantity</string>
+</resources>

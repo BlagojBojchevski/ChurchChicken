@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/spinnerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+        <com.tts.gueststar.utility.MultiSelectionSpinner
+                android:id="@+id/spinnerMultipleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_margin="@dimen/dimen_5"/>
+
+        <TextView
+                android:id="@+id/hintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColorHint="#4c4c4c"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:hint="@string/select"
+                style="@style/TextViewDark"/>
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorAccent"/>
+
+
+
+</LinearLayout>

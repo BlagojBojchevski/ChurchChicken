@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/nsrsdkrelevant-aprel-release.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/73b3a10ddd04e255250b67042818e952/transformed/jetified-nsrsdkrelevant-aprel-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/73b3a10ddd04e255250b67042818e952/transformed/jetified-nsrsdkrelevant-aprel-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/73b3a10ddd04e255250b67042818e952/transformed/jetified-nsrsdkrelevant-aprel-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

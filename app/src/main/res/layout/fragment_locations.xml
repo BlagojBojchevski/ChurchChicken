@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:splitMotionEvents="false">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:background="@drawable/arrow_white_left"
+            android:contentDescription="@string/back_button" />
+
+        <TextView
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_locations" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutTitle"
+            android:splitMotionEvents="false">
+
+        <RelativeLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:splitMotionEvents="false">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/btnMap">
+
+
+                <EditText
+                    android:id="@+id/etLocationSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:background="@drawable/search_short"
+                    android:drawableStart="@drawable/search_icon"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:textColorHint="@color/dark_blue"
+                    android:hint="@string/hint_location_search"
+                    android:imeOptions="actionDone"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="30"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:paddingEnd="@dimen/dimen_5"
+                    tools:ignore="Autofill" />
+
+                <ImageButton
+                        android:id="@+id/btn_clear_search"
+                        android:contentDescription="@string/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:background="@drawable/clear_icon" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:background="@mipmap/map"
+                android:contentDescription="@string/contentdescription" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/layoutLocationsOn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_below="@+id/layoutSearch"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:layout_marginEnd="@dimen/dimen_2"
+                android:splitMotionEvents="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLocations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:splitMotionEvents="false" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/layoutLocationsOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutSearch"
+                android:layout_marginTop="@dimen/dimen_50"
+                android:orientation="vertical"
+                android:splitMotionEvents="false"
+                android:visibility="visible">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:contentDescription="@string/contentdescription"
+                    android:src="@drawable/no_location" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations1"
+                    style="@style/TextView22Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_1"
+                    android:textAlignment="center" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations2"
+                    style="@style/TextViewNoLocationsRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_2"
+                    android:textAlignment="center" />
+
+            <TextView
+                    android:id="@+id/tvNoLocations3"
+                    style="@style/TextView22Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_locations_text_3"
+                    android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutSearch"
+                android:splitMotionEvents="false"
+                android:visibility="invisible">
+
+            <fragment
+                android:id="@+id/googleMap"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerLocations"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_viewpager_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dimen_10" />
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/tvNoLocationsFound"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/no_locations_found_text"
+                android:textAlignment="center"
+                android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

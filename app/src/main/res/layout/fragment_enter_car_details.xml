@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:contentDescription="@string/contentdescription"
+            android:padding="@dimen/dimen_5"
+            android:src="@drawable/arrow_white_left" />
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/enter_car_info" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionbar">
+
+
+
+
+        <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/btn_proceed_to_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+            <com.tts.gueststar.utility.CustomEditTextAddCarModel
+                    android:id="@+id/etMake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_5"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:hint="@string/make"
+                    android:background="@android:color/transparent"
+                    android:inputType="textVisiblePassword"
+                    style="@style/EditText"/>
+
+            <View
+                    android:background="@color/black50opacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"/>
+
+            <com.tts.gueststar.utility.CustomEditTextAddCarModel
+                    android:id="@+id/etModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_5"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:hint="@string/model"
+                    android:background="@android:color/transparent"
+                    android:inputType="textVisiblePassword"
+                    style="@style/EditText"/>
+
+            <View
+                    android:background="@color/black50opacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"/>
+
+            <com.tts.gueststar.utility.CustomEditTextAddCarModel
+                    android:id="@+id/etColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_5"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:hint="@string/color"
+                    android:background="@android:color/transparent"
+                    android:inputType="textVisiblePassword"
+                    style="@style/EditText"/>
+
+            <View
+                    android:background="@color/black50opacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"/>
+        </LinearLayout>
+
+
+        <Button
+                android:id="@+id/btn_proceed_to_order"
+                style="@style/BottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/proceed_to_order"
+                android:textAlignment="center"/>
+
+    </RelativeLayout>
+</RelativeLayout>

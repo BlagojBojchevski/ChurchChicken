@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/layoutMultipleChoice"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <CheckBox
+            android:id="@+id/cbMultipleChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_selector"
+            android:layout_margin="@dimen/dimen_5"/>
+
+    <TextView
+            android:id="@+id/tvMultipleChoiceValue"
+            android:layout_toEndOf="@+id/cbMultipleChoice"
+            android:layout_margin="@dimen/dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextView"/>
+
+</RelativeLayout>

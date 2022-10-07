@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+    <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+
+        <TextView
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_add_gift_card" />
+
+        <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:contentDescription="@string/contentdescription"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/arrow_left_black" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/save_gift_card"
+            android:layout_below="@+id/actionbar">
+
+
+        <LinearLayout
+                android:id="@+id/layout_update_card_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/black50opacity" />
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="vertical">
+
+
+                <TextView
+                        style="@style/TextViewNBProGray14Red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:text="@string/hint_gift_card" />
+
+                <com.tts.gueststar.utility.CustomGiftCardEditText
+                        android:id="@+id/etSignUpZip"
+                        style="@style/TextViewDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_gift_card"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:padding="@dimen/dimen_5" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black50opacity" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+            android:id="@+id/save_gift_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="?actionBarSize">
+
+        <Button
+                android:id="@+id/btn_save_gift_card"
+                style="@style/BottomButtonsManagePayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save" />
+
+    </LinearLayout>
+
+</RelativeLayout>

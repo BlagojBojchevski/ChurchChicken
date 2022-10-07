@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/relevantsdk-aprel-release.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cc062246cfc73eb18e9c157d9b0aa9b5/transformed/jetified-relevantsdk-aprel-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc062246cfc73eb18e9c157d9b0aa9b5/transformed/jetified-relevantsdk-aprel-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc062246cfc73eb18e9c157d9b0aa9b5/transformed/jetified-relevantsdk-aprel-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_sign_up"
+        tools:context=".fragments.userauth.SignUpFragment">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5"
+            android:background="@drawable/close_icon"
+            android:contentDescription="@string/close_button"
+            android:padding="@dimen/dimen_5" />
+
+        <TextView
+            style="@style/TitleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_sign_up" />
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutTitle"
+        android:background="@mipmap/bg_sign_up"
+            android:fitsSystemWindows="true">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomEmailEditText
+                        android:id="@+id/etSignUpEmail"
+                        style="@style/EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/dimen_5"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingEnd="@dimen/dimen_15"
+                        android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_clear_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/clear_icon"
+                            android:contentDescription="@string/clear_text"
+                            android:visibility="gone" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpEmail"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomPasswordEditText
+                            android:id="@+id/etSignUpPassword"
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_password"
+                            android:inputType="textPassword"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_15"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_hide_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/eye_on"
+                            android:contentDescription="@string/clear_text" />
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpPassword"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomEditTextFirstName
+                            android:id="@+id/etSignUpFirstName"
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_first_name"
+                            android:inputType="textVisiblePassword|textCapSentences"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_15"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_clear_firstname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/clear_icon"
+                            android:contentDescription="@string/clear_text"
+                            android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpFirstName"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomEditTextLastName
+                            android:id="@+id/etSignUpLastName"
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_last_name"
+                            android:inputType="textVisiblePassword|textCapSentences"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_15"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_clear_lastname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/clear_icon"
+                            android:contentDescription="@string/clear_text"
+                            android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpLastName"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomPhoneNumberEditText
+                            android:id="@+id/etSignUpPhoneNumber"
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_phone_number"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_15"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_clear_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/clear_icon"
+                            android:contentDescription="@string/clear_text"
+                            android:visibility="gone" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpPhoneNumber"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tts.gueststar.utility.CustomZipCodeEditText
+                            android:id="@+id/etSignUpZip"
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/dimen_5"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_zip"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_15"
+                            android:paddingBottom="@dimen/dimen_5" />
+
+                    <ImageButton
+                            android:id="@+id/btn_clear_zip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:background="@drawable/clear_icon"
+                            android:contentDescription="@string/clear_text"
+                            android:visibility="gone" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutSignUpFavoriteLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpZip"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                <RelativeLayout
+                        android:id="@+id/layoutFavLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        android:id="@+id/tvFavLocation"
+                        style="@style/EditTextHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/hint_favorite_location"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/arow_right"
+                            android:contentDescription="@string/contentdescription"
+                            android:importantForAccessibility="no" />
+
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/layoutBirthdayAndReferral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSignUpFavoriteLocation"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                    <TextView
+                            style="@style/TextViewOmnesRegular15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:text="@string/hint_birthday"
+                            tools:ignore="RtlSymmetry" />
+
+                    <RelativeLayout
+                            android:id="@+id/layoutBirthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10">
+
+                        <TextView
+                                android:id="@+id/tvBirthday"
+                                style="@style/EditTextHint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/hint_birthday_date"
+                                tools:ignore="RelativeOverlap" />
+
+                        <ImageButton
+                                android:id="@+id/btnBirthdayAction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/arow_down"
+                                android:contentDescription="@string/clear"
+                                android:importantForAccessibility="no"
+                                android:padding="@dimen/dimen_2" />
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:background="@color/line_color" />
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <com.tts.gueststar.utility.CustomEditTextOptional
+                                android:id="@+id/etSignUpReferralCode"
+                                style="@style/EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="@dimen/dimen_5"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/hint_referral"
+                                android:inputType="textVisiblePassword"
+                                android:maxLength="30"
+                                android:paddingStart="@dimen/dimen_5"
+                                android:paddingTop="@dimen/dimen_5"
+                                android:paddingEnd="@dimen/dimen_15"
+                                android:paddingBottom="@dimen/dimen_5" />
+
+                        <ImageButton
+                                android:id="@+id/btn_clear_referral"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/dimen_10"
+                                android:background="@drawable/clear_icon"
+                                android:contentDescription="@string/clear_text"
+                                android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/line_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/layoutOptIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutBirthdayAndReferral"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:orientation="horizontal">
+
+                <CheckBox
+                        android:id="@+id/cbOptIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:button="@drawable/checkbox_selector" />
+
+                <TextView
+                        android:id="@+id/tvSignUpOptIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView18Omnes"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/text_opt_in" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/layoutTouPp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutOptIn"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:orientation="horizontal">
+
+                <CheckBox
+                        android:id="@+id/cbTouPp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@drawable/checkbox_selector" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_toEndOf="@+id/cbTouPp"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/spanable_1"
+                            style="@style/TextView18Omnes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/spanable_1" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/spanable_2"
+                                style="@style/TextViewLocationsDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/spanable_2" />
+
+                        <TextView
+                                android:id="@+id/spanable_3"
+                                style="@style/TextView18Omnes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/spanable_3" />
+
+                        <TextView
+                                android:id="@+id/spanable_4"
+                                style="@style/TextViewLocationsDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/spanable_4" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/BottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTouPp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="@string/signup" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

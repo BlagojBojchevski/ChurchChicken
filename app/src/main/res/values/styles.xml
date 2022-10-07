@@ -1,0 +1,849 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+
+    <style name="TutorialTextView_1">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TutorialTextView_2">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black_lite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TutorialTextView_3">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="HomeLocationTextView">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewDark14">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDark18Bold">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDark18Blue">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="Title">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+
+    <style name="TitleWhite">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+
+    <style name="TitleRedBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/blue2</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TitleRedBold18">
+        <item name="android:fontFamily">@font/dinprobold</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TitleRedBold18No">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TitleBlackBold18">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="Skip_Tutorial">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+
+    <style name="TextViewBOLD">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewBOLD2">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/blue2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView14">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextView13">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView13bold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewWhite">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewWhite20">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextViewWhite15">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewWhite11">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewRed15">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRed11">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView16">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewMessages">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView16Bold">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRed">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView18Red">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView18Omnes">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+
+    <style name="TextViewRedBold18">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRedBold20">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRedBold24">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRedBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRedBold13">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDarkBlue">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BottomButtonsNoMargin" parent="@android:style/TextAppearance.Medium">
+        <item name="android:background">@color/yellow</item>
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">@dimen/dimen_7</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BottomButtons" parent="@android:style/TextAppearance.Medium">
+        <item name="android:background">@drawable/ic_sign_up</item>
+        <item name="android:layout_marginBottom">?actionBarSize</item>
+        <item name="android:layout_marginStart">@dimen/dimen_10</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_10</item>
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">@dimen/dimen_7</item>
+    </style>
+
+    <style name="BottomButtonsMarginNo" parent="@android:style/TextAppearance.Medium">
+        <item name="android:background">@drawable/ic_sign_up</item>
+        <item name="android:layout_marginStart">@dimen/dimen_10</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_10</item>
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/dark_blue</item>
+
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">@dimen/dimen_7</item>
+    </style>
+
+    <style name="TextViewSignUp">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@color/edit_text_color_hint</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="EditText">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textColorHint">@color/dark_blue</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="EditTextHint">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewNoLocationsRed">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22Gray">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22Black">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewLocationsName">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewLocationsFields">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewSupportLocationsFields">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewLocationsDistance">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewNoLocationsYellow">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewLocations">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewLocationsActions">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextViewSmall">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewHi">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewSmallBrown">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22BrownBold">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewBIGBlacknew">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewSmallYellow">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewSmallYellow14">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextView12heavitas">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView30omnes">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+
+    <style name="TextView24omnes">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextView26omnes">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="TextView16Omnes">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewTotalPointsText">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black_lite</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRewardsInfoText">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/blue2</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewRewardName">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewBrownOpacitySmall">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView12BrownBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView12BlackBold">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="TextView12YellowBoldDarkblue">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="TextView12YellowRegular">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView12WhiteRegular">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewFaq">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewheavitas8">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewBIG">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewPrmoInfo">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewMEDIUM">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewMEDIUMOMNES">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewBIGBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewPrmoInfoNotWorking">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewCnstactUs">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/brownish_red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextView18Brown">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextView18">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView13Bold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView18Unselected">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewBlack12">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TextViewSelectedRewardsTitle">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewDark">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDarkBoldHistory">
+        <item name="android:fontFamily">@font/dinprobold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewBlack">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22BrownRegular">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22RedRegulas">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@color/red_red</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView22">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextView23Brown">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewNBProGray14">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewNBProGray14Red">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewNBProGray17">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TextViewHelserifMedium18">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewNBProYellow48">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">55sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewNBProYellow48DarkBlue">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewNBProBlack21">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDarkBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BottomButtonsManagePayment" parent="@android:style/TextAppearance.Medium">
+        <item name="android:background">@color/yellow</item>
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">@dimen/dimen_7</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDarkHint">
+        <item name="android:fontFamily">@font/dinpromedium</item>
+        <item name="android:textColor">@color/edit_text_color_hint</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextViewDarkHintBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/edit_text_color_hint</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+
+    <style name="ButtonTextBold">
+        <item name="android:fontFamily">@font/heavitasbold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextViewRegular23">
+        <item name="android:fontFamily">@font/gothicextrabold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="TextViewOmnesRegular15">
+        <item name="android:fontFamily">@font/omnesregular</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

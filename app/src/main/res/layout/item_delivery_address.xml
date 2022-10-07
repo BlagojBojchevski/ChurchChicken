@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/btn_address"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_5">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/contentdescription"
+        android:src="@drawable/ic_arrow_blue_right" />
+
+
+    <TextView
+            android:id="@+id/txt_address"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/arrow"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+
+
+    <ImageView
+            android:id="@+id/delete_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/contentdescription"
+            android:src="@drawable/clear_icon" />
+
+</RelativeLayout>

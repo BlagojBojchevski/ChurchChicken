@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+
+
+    <TextView
+            android:id="@+id/tvCameraScannerHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_header_text"
+            android:textColor="#8a8a8a"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:textSize="16sp"
+    />
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/cameraScanner"
+            android:layout_below="@+id/tvCameraScannerHeader"
+            android:layout_above="@+id/btnCameraCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_10"
+            android:background="#00000000"
+            />
+
+    <Button
+            android:id="@+id/btnCameraCancel"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+    />
+
+</RelativeLayout>

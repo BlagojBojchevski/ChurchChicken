@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:splitMotionEvents="false">
+
+    <RelativeLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/black">
+
+        <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:background="@drawable/close_icon"
+                android:contentDescription="@string/close_button" />
+
+        <TextView
+                style="@style/TitleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_contact_us" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:id="@+id/layoutStoreFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutTitle"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:orientation="vertical"
+
+            android:splitMotionEvents="false">
+
+
+        <RelativeLayout
+                android:id="@+id/btnStoreFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10"
+                android:background="@drawable/ic_sign_up"
+                android:splitMotionEvents="false">
+
+            <TextView
+                style="@style/TextView23Brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:text="@string/store_feedback"
+                tools:ignore="RelativeOverlap" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/btnAppSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:background="@drawable/ic_sign_up"
+                android:splitMotionEvents="false">
+
+            <TextView
+                    style="@style/TextView23Brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:text="@string/app_support"
+                    tools:ignore="RelativeOverlap" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

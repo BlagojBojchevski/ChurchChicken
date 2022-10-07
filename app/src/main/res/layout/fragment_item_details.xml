@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+    <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_height="?actionBarSize">
+
+        <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:contentDescription="@string/back_button"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/arrow_white_left" />
+
+
+        <TextView
+                android:id="@+id/title"
+                style="@style/TitleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/order_text" />
+
+        <RelativeLayout
+                android:id="@+id/btn_basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_5"
+                tools:ignore="RelativeOverlap">
+
+            <ImageView
+                    android:id="@+id/basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/contentdescription"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@mipmap/icon_order_2" />
+
+
+            <TextView
+                    android:id="@+id/basket_number"
+                    style="@style/TextViewRewardsInfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/zero" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_buttons"
+            android:layout_below="@+id/actionbar"
+            android:fillViewport="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_190"
+                    android:src="@mipmap/app_icon"
+                    android:contentDescription="@string/submenu_iten"
+                    android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_190"
+                android:contentDescription="@string/submenu_iten"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_image"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/item_name"
+                    style="@style/TextViewRedBold18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_10" />
+
+                <TextView
+                    android:id="@+id/item_description"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_10" />
+
+                <TextView
+                    android:id="@+id/item_calories"
+                    style="@style/TextViewRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_10" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_10">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/special_ins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextViewDarkBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_15"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:text="@string/special_instructions1"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/txt_special"
+                        style="@style/TextViewRed11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:text="@string/special_desc" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@color/yellow" />
+
+
+                    <EditText
+                        android:id="@+id/et_special_instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:background="#00000000"
+                        android:gravity="top|start"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:maxLength="200"
+                        android:maxLines="8"
+                        android:scrollbars="vertical"
+                        tools:ignore="Autofill,LabelFor" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@color/yellow" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@drawable/rectangle">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dimen_5">
+
+                        <ImageView
+                            android:id="@+id/btn_minus"
+                            style="@style/TextViewRedBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/minus_quantity"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/minus" />
+
+
+                        <TextView
+                            android:id="@+id/txt_quantity"
+                            style="@style/TextView26omnes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:text="@string/one" />
+
+
+                        <ImageView
+                            android:id="@+id/btn_plus"
+                            style="@style/TextViewRedBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:contentDescription="@string/plus_quantity"
+                            android:paddingStart="@dimen/dimen_5"
+                            android:paddingEnd="@dimen/dimen_5"
+                            android:src="@drawable/plus" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+            android:id="@+id/bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dimen_20">
+
+
+        <RelativeLayout
+            android:id="@+id/btn_add_to_bag"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/squash"
+            tools:ignore="UselessParent">
+
+
+            <TextView
+                style="@style/TextViewSmallYellow14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_centerInParent="true"
+                android:text="@string/add_to_bag" />
+
+
+            <TextView
+                android:id="@+id/item_price"
+                style="@style/TextViewSmallYellow14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:text="@string/zero"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

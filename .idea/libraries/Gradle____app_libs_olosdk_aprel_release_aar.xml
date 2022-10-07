@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/olosdk-aprel-release.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2a5746ca0633d133c62e731a38cf9f0a/transformed/jetified-olosdk-aprel-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2a5746ca0633d133c62e731a38cf9f0a/transformed/jetified-olosdk-aprel-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2a5746ca0633d133c62e731a38cf9f0a/transformed/jetified-olosdk-aprel-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
