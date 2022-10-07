@@ -9,7 +9,7 @@ Option - 1
 3. In the Declared Dependencies tab, click add and select Jar/Aar Dependency in the dropdown.
 <img width="722" alt="Screenshot 2022-10-07 at 16 28 49" src="https://user-images.githubusercontent.com/98315564/194577792-d9f44c73-a0a2-402e-ba47-adcd69b04d44.png">
 
-4. In the Add Jar/Aar Dependency dialog, provide a path to the library ( libs/relevantsdk-aprel-release.aar ).
+4. In the Add Jar/Aar Dependency dialog, provide a path to the library ( e.g. libs/relevantsdk-aprel-release.aar ).
 5. Select the configuration that requires this dependency, or select "implementation" if it applies to all configurations, and click OK.
 6. Indicate in build.gradle that the library has been added. Also, these lines need to be added.
 
